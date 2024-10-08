@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #003366;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;  /* Keeps sidebar fixed */
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar .platform-name {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar .nav-links li {
+            margin: 15px 0;
+        }
+
+        .sidebar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .sidebar .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px; /* To accommodate fixed sidebar */
+        }
+    </style>
+    <script>
+
+        function loadContent(page) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        if (this.status == 200) {
+            document.getElementById("main-content").innerHTML = this.responseText;
+        } else if (this.status == 303) {
+            // Handle redirect if 303 response is received
+            window.location.href = this.responseURL;
+        }
+    }
+    xhttp.open("GET", page, true);
+    xhttp.send();
+}
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <nav class="sidebar">
+        <h1 class="platform-name">TalentNock</h1>
+        <ul class="nav-links">
+            <li><a href="javascript:void(0);" onclick="loadContent('/recruiter_profile')">Profile</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('/job_post')">Job Post</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('/applications')">Applications</a></li>
+<!--            <li><a href="javascript:void(0);" onclick="loadContent('/logout')">Logout</a></li>-->
+            
+<!-- <li><a href="logout" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+    <main class="content" id="main-content">
+        <h2>Welcome to Your Dashboard</h2>
+        <p>This is the default content. Click on the links in the sidebar to load new content.</p>
+    </main>
+</div>
+</body>
+</html> -->
+
+ -->

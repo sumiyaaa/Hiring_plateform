@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #003366;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;  /* Keeps sidebar fixed */
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar .platform-name {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar .nav-links li {
+            margin: 15px 0;
+        }
+
+        .sidebar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .sidebar .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px; /* To accommodate fixed sidebar */
+        }
+    </style>
+    <script>
+        // Function to load page content without refreshing the page
+        function loadContent(page) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("main-content").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", page, true);
+            xhttp.send();
+        }
+
+        function logout() {
+            fetch('/logout')
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = '/candidate'; // Redirect to candidate login page after logout
+                    } else {
+                        alert('Logout failed. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Logout error:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <nav class="sidebar">
+        <h1 class="platform-name">TalentNook</h1>
+        <ul class="nav-links">
+            <li><a href="javascript:void(0);" onclick="loadContent('/candidate_profile')">Profile</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('/resume')">Resume</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('/jobs')">Jobs</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('/selection_notification')">Notification</a></li>
+            <li><a href="javascript:void(0);" onclick="loadContent('/resume_insights')">Resume Insights</a></li>
+            <li><a href="logout" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+    <main class="content" id="main-content">
+        <h2>Welcome to Your Dashboard</h2>
+        <p>This is the default content. Click on the links in the sidebar to load new content.</p>
+    </main>
+</div>
+</body>
+</html> -->
