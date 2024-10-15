@@ -16,7 +16,7 @@
 
         .sidebar {
             width: 250px;
-            background-color: #003366;
+            background-color: #4070f4;
             color: white;
             height: 100vh;
             padding: 20px;
@@ -56,6 +56,61 @@
             padding: 20px;
             margin-left: 250px; /* To accommodate fixed sidebar */
         }
+        .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 24px;
+    color: #4c4c4c;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #4c6ef5;
+}
+
+.view-badges {
+    background-color: #4c6ef5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-badges:hover {
+    background-color: #3a55a1;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 200px; /* Adjust size as needed */
+}
     </style>
     <script>
         // Function to load page content without refreshing the page
@@ -97,8 +152,18 @@
         </ul>
     </nav>
     <main class="content" id="main-content">
-        <h2>Welcome to Your Dashboard</h2>
-        <p>This is the default content. Click on the links in the sidebar to load new content.</p>
+        <div class="main">
+            <div class="card">
+                <h1>Welcome To candidate Dahsbord🎉</h1>
+                <h1>Welcome, Candidate!</h1>
+                <!-- <p>You have done <span class="highlight">72% 👏</span> more sales today.</p> -->
+                <p>We're excited to have you at Talent Nook. Here, your skills meet opportunities that can shape your future. Dive in, explore your potential, and let’s work together to find the perfect path for your career!</p>
+                <button class="view-badges">START YOUR JOURNEY</button>
+                <div class="image-container">
+                    <img src="/static/images/download.png" alt="User Illustration" />
+                </div>
+            </div>
+        </div>
     </main>
 </div>
 </body>
