@@ -1,100 +1,135 @@
-<!-- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Post</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="fonts/icomoon/style.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Style -->
+    
+
+    <title>Contact Form #6</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        body {
+          font-family: "Roboto", sans-serif;
+          background-color: #fff;
+          line-height: 1.9;
+          color: #8c8c8c;
         }
 
-        .job-post-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Roboto", sans-serif;
+          color: #000;
         }
 
-        .job-post-form {
-            width: 400px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+        .content {
+          padding: 7rem 0;
         }
 
-        .job-post-form h1 {
-            text-align: center;
-            margin-bottom: 20px;
+        .form-container {
+          background: #f9f9f9;
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        .job-post-form label {
-            display: block;
-            margin-bottom: 5px;
+        .form-group {
+          margin-bottom: 15px;
         }
 
-        .job-post-form input[type="text"],
-        .job-post-form textarea,
-        .job-post-form select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
+        .form-control {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
         }
 
-        .job-post-form textarea {
-            height: 100px;
-            resize: none;
+        .btn-submit {
+          background-color: #4c6ef5;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
         }
 
-        .job-post-form button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007bff;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
+        .btn-submit:hover {
+          background-color: #3a55a1;
         }
 
-        .job-post-form button:hover {
-            background-color: #0056b3;
+        label {
+          font-weight: bold;
+          margin-bottom: 5px;
+          display: block;
         }
     </style>
-</head>
-<body>
-<div class="job-post-container">
-    <form class="job-post-form" action="/job-post" method="post">
-        <h1>Create a Job Post</h1>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <h3 class="heading mb-4"><b>Post Your Job Opening</b></h3>
+                <p>Fill in the details below to create a new job post for potential candidates. Make sure to include all the necessary information to attract the right applicants.</p>
+                <p><img src="/static/images/download (1).png" alt="Image" class="img-fluid"></p>
+              </div>
+              <div class="col-md-6">
+                <div class="form-container">
+                  <h1>Create a Job Post</h1>
+                  <form class="job-post-form" action="/job-post" method="post">
+                    <div class="form-group">
+                      <label for="company_name">Company Name:</label>
+                      <input type="text" id="company_name" name="company_name" class="form-control" required>
+                    </div>
 
-        <label for="company_name">Company Name:</label>
-        <input type="text" id="company_name" name="company_name" required>
+                    <div class="form-group">
+                      <label for="job_title">Job Title:</label>
+                      <input type="text" id="job_title" name="job_title" class="form-control" required>
+                    </div>
 
-        <label for="job_title">Job Title:</label>
-        <input type="text" id="job_title" name="job_title" required>
+                    <div class="form-group">
+                      <label for="description">Job Description:</label>
+                      <textarea id="description" name="description" class="form-control" rows="4" required></textarea>
+                    </div>
 
-        <label for="description">Job Description:</label>
-        <textarea id="description" name="description" required></textarea>
+                    <div class="form-group">
+                      <label for="skills">Required Skills:</label>
+                      <input type="text" id="skills" name="skills" class="form-control" required>
+                    </div>
 
-        <label for="skills">Required Skills:</label>
-        <input type="text" id="skills" name="skills" required>
+                    <div class="form-group">
+                      <label for="job_type">Job Type:</label>
+                      <select id="job_type" name="job_type" class="form-control" required>
+                        <option value="Onsite">Onsite</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Hybrid">Hybrid</option>
+                      </select>
+                    </div>
 
-        <label for="job_type">Job Type:</label>
-        <select id="job_type" name="job_type" required>
-            <option value="Onsite">Onsite</option>
-            <option value="Remote">Remote</option>
-            <option value="Hybrid">Hybrid</option>
-        </select>
+                    <div class="form-group">
+                      <button type="submit" class="btn-submit">Post Job</button>
+                    </div>
+                  </form>
 
-        <button type="submit">Post Job</button>
-    </form>
-</div>
-</body>
-</html> -->
+                  <div id="form-message-warning mt-4"></div>
+                  <div id="form-message-success">
+                    Your message was sent, thank you!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
+
